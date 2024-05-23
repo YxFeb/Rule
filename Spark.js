@@ -6,12 +6,12 @@ if (typeof $response === "undefined") {
   delete $request.headers["X-RevenueCat-ETag"];
   responseHandler.headers = $request.headers;
 } else if (responseBody && responseBody.subscriber) {
-  const subscriber = responseBody.subscriber;
+  const { subscriber } = responseBody;
   subscriber.subscriptions = subscriber.subscriptions || {};
   subscriber.entitlements = subscriber.entitlements || {};
 
   const subscriptionData = {
-    "expires_date": "2029-12-31T00:00:00Z",
+    "expires_date": "52013-01-14T00:00:00Z",
     "original_purchase_date": "2022-11-18T03:57:16Z",
     "purchase_date": "2022-11-18T04:00:12Z",
     "ownership_type": "PURCHASED",
