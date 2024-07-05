@@ -8,12 +8,12 @@ DOMAIN,open.e.kuaishou.cn,REJECT
 DOMAIN,open.e.kuaishou.com,REJECT
 
 [URL Rewrite]
-^https://api\.weibo\.cn/2/(ad/weibointl|cardlist\?v_f) - reject // 信息流广告、热门视频
-^https://weibointl\.api\.weibo\.cn/portal\.php\?a=treehole - reject // 匿名故事
+^https://api\.weibo\.cn/2/(ad/weibointl|cardlist\?v_f) - reject
+^https://weibointl\.api\.weibo\.cn/portal\.php\?a=treehole - reject
 
 [MITM]
 hostname = %APPEND% api.weibo.cn, weibointl.api.weibo.cn
 
 [Script]
-微博轻享版 = type=http-response,pattern=^https://weibointl\.api\.weibo\.cn/portal\.php\?a=(discover_all|trends|search_discover|get_coopen_ads|open_app&auth|user_center|get_searching_info),requires-body=1,script-path=https://raw.githubusercontent.com/YxFeb/Rule/main/WeiboIntl.js // 探索页、趋势页、微博热搜、开屏广告、帖子中的会员Bannner、我的页面、大家都在搜
-微博轻享版 = type=http-response,pattern=^https://weibointl\.api\.weibo\.cn/portal\.php\?ct=feed&a=search_topic,requires-body=1,script-path=https://raw.githubusercontent.com/YxFeb/Rule/main/WeiboIntl.js // 热门搜索
+微博轻享版 = type=http-response,pattern=^https://weibointl\.api\.weibo\.cn/portal\.php\?a=(discover_all|trends|search_discover|get_coopen_ads|open_app&auth|user_center|get_searching_info),requires-body=1,script-path=https://raw.githubusercontent.com/YxFeb/Rule/main/WeiboIntl.js
+微博轻享版 = type=http-response,pattern=^https://weibointl\.api\.weibo\.cn/portal\.php\?ct=feed&a=search_topic,requires-body=1,script-path=https://raw.githubusercontent.com/YxFeb/Rule/main/WeiboIntl.js
