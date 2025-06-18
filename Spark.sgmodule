@@ -2,9 +2,9 @@
 #!desc=Premium
 
 [Script]
-Spark = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=Spark.js, timeout=60
+Spark = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/YxFeb/Rule/main/Spark.js, timeout=60
 
-Spark = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=Spark.js, requires-body=true, max-size=-1, timeout=60
+Spark = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/YxFeb/Rule/main/Spark.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com
